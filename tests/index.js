@@ -1,7 +1,7 @@
-const test = require('tape');
-const firebase = require('@firebase/rules-unit-testing');
-const terminal = require('./console-tester');
-let fireway = require('../');
+import test from 'tape';
+import firebase from '@firebase/rules-unit-testing';
+import terminal from './console-tester';
+import fireway from '../';
 
 function wrapper(fn) {
 	return async (t) => {
@@ -24,7 +24,7 @@ function wrapper(fn) {
 async function setup() {
 	// Clear the require cache
 	Object.keys(require.cache).map(key => { delete require.cache[key]; });
-	fireway = require('../');
+	fireway = await import('../');
 
 	// Clear the terminal tracking
 	terminal.reset();

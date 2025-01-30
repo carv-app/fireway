@@ -1,4 +1,4 @@
-const capcon = require('capture-console');
+import capcon from 'capture-console';
 
 let buffer = '';
 capcon.startCapture(process.stdout, o => buffer += o);

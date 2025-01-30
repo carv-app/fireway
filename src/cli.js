@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const sade = require('sade');
-const fireway = require('./index');
-const pkg = require('../package.json');
+import sade from 'sade';
+import { migrate } from './index.js';
+import pkg from '../package.json' assert { type: 'json' };
 
 const prog = sade('fireway').version(pkg.version);
 
@@ -28,7 +28,7 @@ prog
     .action(async (opts) => {
         try {
             opts.debug = !opts.quiet;
-            await fireway.migrate(opts)
+            await migrate(opts)
         } catch (e) {
             console.log('ERROR:', e.message);
             process.exit(1);
