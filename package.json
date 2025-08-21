@@ -35,9 +35,9 @@
     }
   },
   "dependencies": {
-    "@google-cloud/firestore": "^7.11.0",
+    "@google-cloud/firestore": "^7.11.3",
     "callsites": "^4.2.0",
-    "firebase-admin": "^13.0.2",
+    "firebase-admin": "^13.4.0",
     "md5": "^2.3.0",
     "sade": "^1.8.1",
     "semver": "^7.6.3"
